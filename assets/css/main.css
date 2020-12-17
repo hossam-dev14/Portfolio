@@ -508,7 +508,13 @@ footer p:nth-child(2){
     font-size: 1.0rem;  
     text-transform: lowercase;
 }
-
+#copy a{
+    text-decoration: none;
+    color: inherit;
+}
+#copy a:hover{
+    color: var(--primary-5);
+}
 .social-icons i{ color: var(--black);}
 .social-icons a:hover, 
 .a-social-b a:hover{ 
