@@ -2,12 +2,30 @@ const toggle = document.querySelector('.toggle');
 const nav = document.querySelector('nav');
 const ul = nav.childNodes[5];
 const li = document.querySelectorAll('li');
+const links = document.querySelectorAll('li a');
 const logo = document.querySelector('.logo');
+
+
+// Links add active class
+
+links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+
+        // Remove class 'active' for every a
+        links.forEach(a => {
+            a.classList.remove('active')
+        });
+
+        // The Add class 'active' to the current target a
+        e.currentTarget.classList.add('active');
+    });
+});
 
 
 // toggle bar
 toggle.addEventListener('click', function(){
     'use strict;'
+  
     this.classList.toggle('active-nav');
     nav.classList.toggle('active-nav');
     logo.classList.toggle('active-logo');
@@ -21,12 +39,11 @@ toggle.addEventListener('click', function(){
         }, 50);
     } 
     else {
-        
-        // li.forEach(e => {
-        //     e.style.transform = 'translateX(560%)';
-        // }); 
-    }
+        li.forEach(e => {
+           // e.style.transform = 'translateX(560%)';
 
+        }); 
+    }
 });
 
 
