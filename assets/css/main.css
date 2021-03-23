@@ -3,7 +3,7 @@
 
  Theme Name: Portfolio
  Theme URI: http://
- Description: The Multi-Purpose Onepage Template
+ Description: Portfolio is Onepage Template
  Author: hossam-dev14
  Author URI: http://hossam-dev14.com
  Version: 1.0
@@ -18,21 +18,20 @@
 	- Fonts Awsome Icons 
 	- Google Fonts 
 	
-	 01 Variables
-	 02 Global Styles
-	 03 TYPOGRAPHY 
-	 04 Utilety 
-	 05 About
-	 06 Servives
-	 07 Boxs
-	 08 Contact
-	 09 Footer
-
+    01 Variables
+    02 Global Styles
+    03 TYPOGRAPHY 
+    04 Utilety 
+    05 About
+    06 Servives
+    07 Boxs
+    08 Contact
+    09 Footer
+    10 Scroll Up
+    11 Responsive
 --------------------------------------------------- */
 
 
-/* Fonts Awsome Icons */
-@import url(font-awesome.min.css);
 
 /* Google Fonts  */
 @font-face {
@@ -44,7 +43,7 @@
        url('Roboto.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap'); */
 
 /* 01 Variables
 ---------------
@@ -101,7 +100,7 @@
     list-style: none !important;
     text-decoration: none !important;
 }
-
+  
 body {
     font-family: var(--ff-primary);
     background: var(--whitesmoke);
@@ -109,6 +108,7 @@ body {
     line-height: 1.5;
     font-size: 0.875rem;
 }
+
 *::selection{
     color: var(--white);
     background-color: var(--primary);
@@ -185,16 +185,7 @@ p {
         /* width: 90%; */
     }
 }
-button{
-    width: 145px;
-    height: 40px;
-    border-radius: 10px;
-    font-family: cursive;
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: capitalize;
-    cursor: pointer;
-}
+
 
 /* 04 Utilety 
 -------------
@@ -202,7 +193,7 @@ button{
 
 section{
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     background-image: url("/images/bg.jpg") no-repeat ; 
     background-size: cover;
     position: relative;
@@ -232,21 +223,36 @@ nav ul{
     display: flex;
     margin-right: -290px;
 }
-nav ul li a{
-    margin: 24px;
+nav ul li{
+    margin: 12px;
     color: #5c5c5c;
     font-size: 15px;
     font-weight: 700;
     transition: all .1s linear;
+    cursor: pointer;
 }
-nav ul li a:hover{
-    border-bottom: 2.7px solid var(--primary);
+a{ text-decoration: none;}
+
+.btn{
+    width: 145px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: cursive;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--black);
+    background-color: var(--whitesmoke);
+    text-transform: capitalize;
+    cursor: pointer;
 }
 
 .active{
     font-weight: bold;
-    border-bottom: 2.7px solid var(--primary);
-    /* color: var(--primary); */
+    color: var(--primary);
 }
 
 .text-container p:nth-child(1){
@@ -297,7 +303,6 @@ button.down-cv:hover{
     position: absolute;
     bottom: 0;
     right: 0;
-    /* transform: translateX(-70%); */
 }
 
 /* 05 About
@@ -493,18 +498,8 @@ button.down-cv:hover{
     font-weight: bold;
     border-bottom:2px solid var(--white);
 }
-.contact-me button{
-    width: 200px;
-    height: 40px;
-    background-color: var(--white);
-    outline: none;
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 5px;
-}
 
-.contact-me button:active {
+.contact-me a.btn:active {
     color: var(--grey);
 }
 
@@ -596,7 +591,31 @@ footer p:nth-child(2){
 }
 
 
-/* 10 Responsive
+/* 10 Scroll Up
+-------------------
+*/
+.scrollup {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    text-indent: -9999px;
+    border: 1.7px solid var(--primary);
+    border-radius: 50%;
+    background:var(--primary) url(../../images/icons/arrow-up.svg) no-repeat 35% 35%;
+    z-index: 999;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.scrollup:hover {
+  background-color: var(--primary-9);
+}
+
+
+/* 11 Responsive
 -------------------
 */
 
@@ -641,10 +660,11 @@ footer p:nth-child(2){
         text-align: center;
         margin: 17px 15px;
     }
-    .contact-me button{
+    .contact-me a{
         font-size:14px;
         height:35px;
         width: 160px;
+
     }
 }
 
@@ -684,7 +704,7 @@ footer p:nth-child(2){
 
     nav ul li{
         padding: 10px;
-        transform: translateX(560%);
+        transform: translateX(10%);
     }
 
     nav ul li a{
@@ -740,9 +760,17 @@ footer p:nth-child(2){
     .logo.active-logo span{
       color: var(--black);
     }
+    
 }
 
 
+@media (max-width:612px){
+    .a-social-b, .scrollup{
+        display: none !important;
+    }
+}
+
+    
 @media (max-width:420px){
     .a-social-b{
         display: none;  
