@@ -20,35 +20,35 @@
     <link rel="icon" href="favicon.png" type="image/x-icon">
 
 </head>
-<body id="home">
-    <section>
+<body>
+    <section id="home">
     <!-- navigation ----------------->
       <nav>
-      <!-- logo -->
+        <!-- logo -->
         <a href="#" class="logo"><span>p</span>ortfolio</a>
         <ul>
-          <li><a href="#" class="active">home</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">projects</a></li>
-          <li><a href="#">contact us</a></li>
+          <li class="active"  onclick="goToID('#home');">home</a></li>
+          <li onclick="goToID('#about');">about</a></li>
+          <li onclick="goToID('#services');">services</a></li>
+          <li onclick="goToID('#contact');">contact us</a></li>
         </ul>
         <!-- bars------------->
         <div class="toggle"></div>
         <!-- download resume--------->
-        <button class="down-cv">download resume</button>
+        <button class="down-cv btn">download resume</button>
       </nav>
     <!-- text ----------------------->
       <div class="text-container">
         <p>Hi There,</p>
         <h1 id="header">i am a Freelancer</h1><!-- Developer Designer -->
         <p>i am Developer <br>& designer</p>
-        <button class="down-cv">download resume</button>
+        <button class="down-cv btn">download resume</button>
       </div>
       <!-- model ---------------------->
       <img src="images/model.png" class="model" alt="model">
     </section>
     <!-- about-section -------------->
-    <div class="about-container">
+    <section id="about" class="about-container">
     <!-- img ------------------------>
       <img src="images/about.png" alt="about">
     <!-- about -------------------- -->
@@ -59,12 +59,12 @@
           if you have any project or if you want to make 
           a software for your bisnes contact me. 
           i make as soon as possible.</p>
-        <button class="down-cv">download resume</button>
+        <button class="down-cv btn">download resume</button>
       </div>
-    </div>
+    </section>
 
     <!-- services ------------>
-    <div class="services">
+    <section id="services" class="services">
       <!-- text ------>
       <div class="services-text">
         <h2>my services</h2>
@@ -118,17 +118,21 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- contact me--------------->
-    <div class="contact-me">
+    <section id="contact" class="contact-me">
       <p>if you have any project in your mind.</p>
-      <button>contact me</button>
-    </div>
+      <a href="mailto:#" class="btn">contact me</a>
+    </section>
 
     <!-- footer-------------------->
     <footer>
-      <h2> going-to internet</h2>
+      <!-- logo -->
+      <div>
+        <a href="#" class="logo">Portfolio</a>
+      </div>
+      
       <p>i makes soon as possible. you really like my work, 
         if you don't i change this until you like 
         i give you seticfaction result</p>
@@ -149,14 +153,15 @@
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
-
+	
+    <!-- scroll to top of the page-->
+    <div class="scrollup" style="display: none;" >
+    </div>
 
 
     <!-- Custom Javascript file -->
     <script src="./assets/js/main.js"></script>
- 	  <!-- <script src="./assets/js/fittext.js"></script> -->
-
-    <!-- Google map -->
+     
 
 </body>
 </html>
