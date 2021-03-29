@@ -2,7 +2,7 @@
 /*-------------------------------------------------
 
  Theme Name: Portfolio
- Theme URI: http://
+ Theme URI: https://hossam-dev14.github.io/Portfolio/
  Description: Portfolio is Onepage Template
  Author: hossam-dev14
  Author URI: http://hossam-dev14.com
@@ -521,9 +521,9 @@ footer h2{
 }
 footer p:nth-child(2){
     color: #7e7e7e;
-    width: 100%;;
+    width: 100%;
     text-align: center;
-    padding: 7px 42px 19px;
+    padding: 7px 120px 19px;
 }
 .social-icons a{
     width: 45px;
