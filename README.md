@@ -10,6 +10,8 @@ https://hossam-dev14.github.io/Portfolio/
 
 
 
+## Description
+Portfolio is a clean and creative HTML template. Designed for creative designers, agencies freelancers, photographer or any creative profession.
 
 ## Contact
 
