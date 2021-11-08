@@ -16,5 +16,5 @@ Portfolio is a clean and creative HTML template. Designed for creative designers
 ## Contact
 
 - Gmail [hossam-dev14](mailto:hossamdev14@gmail.com)
-- GitHub [@hossam-dev14](https://github.com/hossam-dev14)
+- Website [hossam-dev14](https://hossam-dev14.github.io/)
 - Twitter [@hossam-dev](https://twitter.com/hossam-dev)
