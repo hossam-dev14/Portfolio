@@ -738,7 +738,7 @@ footer p:nth-child(2){
         font-size: 27px;
         font-weight: 600;
         position: fixed;
-        right: 27px;
+        right: 34px;
         top: 30px;
         line-height: 0;
         color: var(--red-dark);
