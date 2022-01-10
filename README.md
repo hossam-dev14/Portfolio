@@ -5,8 +5,7 @@
 
 
 // Click here to preview: 
-
-https://hossam-dev14.github.io/Portfolio/
+https://hossam-dev14.github.io/portfolio/
 
 
 
