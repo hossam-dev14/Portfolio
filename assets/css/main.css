@@ -194,10 +194,9 @@ p {
 section{
     width: 100%;
     height: 100vh;
-    background-image: url("/images/bg.jpg") no-repeat ; 
     background-size: cover;
-    position: relative;
     text-transform: capitalize;
+    z-index: 0;
 }
 nav{
     display: flex;
@@ -205,6 +204,12 @@ nav{
     align-items: center;
     height: 60px;
     padding: 0 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    z-index: 10;
 }
 
 .logo{
@@ -231,6 +236,7 @@ nav ul li{
     transition: all .1s linear;
     cursor: pointer;
 }
+nav ul li:hover {color: var(--primary-6);}
 a{ text-decoration: none;}
 
 .btn{
@@ -299,10 +305,11 @@ button.down-cv:hover{
 }
 
 .model{
-    height: 660px;
+    height: 597px;
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: -1;
 }
 
 /* 05 About
@@ -722,7 +729,10 @@ footer p:nth-child(2){
     }
 
     .toggle.active-nav::before{
-        content:'\f00d';
+        content: 'X';
+        font-family: sans-serif;
+        font-size: 27px;
+        font-weight: 600;
         position: fixed;
         right: 5%;
         line-height: 0;
