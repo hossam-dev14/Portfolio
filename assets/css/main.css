@@ -194,9 +194,9 @@ p {
 section{
     width: 100%;
     height: 100vh;
+    background-image: url("/images/bg.jpg") no-repeat;
     background-size: cover;
     text-transform: capitalize;
-    z-index: 0;
 }
 nav{
     display: flex;
@@ -209,6 +209,7 @@ nav{
     left: 0;
     right: 0;
     background: var(--white);
+    box-shadow: 1px 0px 7px var(--silver);
     z-index: 10;
 }
 
@@ -236,7 +237,6 @@ nav ul li{
     transition: all .1s linear;
     cursor: pointer;
 }
-nav ul li:hover {color: var(--primary-6);}
 a{ text-decoration: none;}
 
 .btn{
@@ -305,11 +305,10 @@ button.down-cv:hover{
 }
 
 .model{
-    height: 597px;
+    height: 660px;
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: -1;
 }
 
 /* 05 About
@@ -590,7 +589,7 @@ footer p:nth-child(2){
     line-height: 0;
     box-shadow: 0px 1.7px 7px rgb(0 0 0 / 49%);
     border-radius: 5px;
-    z-index: 10;
+    z-index: 1;
 }
 
 /* 10 Scroll Up
@@ -717,18 +716,23 @@ footer p:nth-child(2){
     .toggle{
         cursor: pointer;
         transition: all .1s linear;
+        width: 24px;
+        height: 24px;
     }
     .toggle:hover{
         color: #999;
     }
-    .toggle::before{
-        content: '\f0c9';
-        font-family: fontAwesome;
-        font-size: 25px;
-        z-index: 1;
+    .toggle span {
+        width: 30px;
+        height: 4px;
+        position: fixed;
+        top: 18px;
+        right: 23px;
+        background: var(--darkGrey);
+        box-shadow: 0px 10px 0px 0px var(--darkGrey), 0px 20px 0px 0px var(--darkGrey);
+        border-radius: 5px;
     }
-
-    .toggle.active-nav::before{
+    .toggle.active-nav::before {
         content: 'X';
         font-family: sans-serif;
         font-size: 27px;
@@ -737,8 +741,8 @@ footer p:nth-child(2){
         right: 5%;
         line-height: 0;
         color: var(--red-dark);
+        z-index: 1;
     }
-
     nav.active-nav ul{
         display: flex !important;
     }
